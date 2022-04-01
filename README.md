@@ -23,11 +23,20 @@ End the program and close the output image windows.
 ### Register Number: 
 i) #To Read,display the image
 ```
-  import cv2
+import cv2
+color_img=cv2.imread('k.png',1)
+cv2.imshow('212221230017,D.R.Vinuthna',color_img)
+cv2.waitKey(0)
 
 ```
 ii) #To write the image
 ```
+
+import cv2
+color_img=cv2.imread('k.png',1)
+w=cv2.imwrite('1.png',color_img)
+cv2.imshow('212221230017,D.R.Vinuthna',color_img)
+cv2.waitKey(0)
 
 
 
@@ -35,19 +44,34 @@ ii) #To write the image
 iii) #Find the shape of the Image
 ```python3
 
-
+import cv2
+colorImage = cv2.imread('k.png',1)
+print(colorImage.shape)
 
 ```
 iv) #To access rows and columns
 
 ```python3
+import cv2
+import random
+color_img=cv2.imread('k.png',1)
+for i in range(100):
+    for j in range(color_img.shape[1]):
+        color_img[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+cv2.imshow('212221230017,D.R.Vinuthna',color_img)
+cv2.waitKey(0)
 
 
 
 ```
 v) #To cut and paste portion of image
 ```python3
-
+import cv2
+color_img = cv2.imread('k.png',1)
+tag = color_img[20:80,20:80]
+color_img[90:150,90:150] = tag
+cv2.imshow('212221230017,D.R.Vinuthna',color_img)
+cv2.waitKey(0)
 
 
 ```
@@ -56,26 +80,20 @@ v) #To cut and paste portion of image
 
 ### i) Read and display the image
 
-<br>
-<br>
+![output](https://github.com/VINUTHNA-2004/Read-and-Write-Image/blob/main/v1.JPG?raw=true)
 
 ### ii)Write the image
 
-<br>
-<br>
+![output](https://github.com/VINUTHNA-2004/Read-and-Write-Image/blob/main/v2.JPG?raw=true)
 
 ### iii)Shape of the Image
-
-<br>
-<br>
+![output](https://github.com/VINUTHNA-2004/Read-and-Write-Image/blob/main/v3.JPG?raw=true)
 
 ### iv)Access rows and columns
-<br>
-<br>
+![output](https://github.com/VINUTHNA-2004/Read-and-Write-Image/blob/main/v4.JPG?raw=true)
 
 ### v)Cut and paste portion of image
-<br>
-<br>
+![output](https://github.com/VINUTHNA-2004/Read-and-Write-Image/blob/main/v5.JPG?raw=true)
 
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
